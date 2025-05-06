@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SoundSense</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_microphone">Microphone</string>
 </resources>
