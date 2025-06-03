@@ -34,9 +34,9 @@ fun SoundSenseApp(
 
     Scaffold(
         bottomBar = {
-//            if (currentRoute != Screen.Microphone.route) {
+            if (currentRoute != Screen.Microphone.route) {
                 BottomBar(navController)
-//            }
+            }
         },
         modifier = Modifier
     ) { innerPadding ->
@@ -50,7 +50,11 @@ fun SoundSenseApp(
             }
 
             composable(Screen.Microphone.route) {
-                MicrophoneScreen()
+                MicrophoneScreen(
+                    navigateBack = {
+                        navController.navigateUp()
+                    },
+                )
             }
 
         }
