@@ -2,8 +2,8 @@ package com.example.soundsense
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -46,7 +46,11 @@ fun SoundSenseApp(
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(Screen.Home.route) {
-                HomeScreen()
+                HomeScreen(
+                    navigateToSpeech = {
+                        navController.navigate(Screen.Microphone.route)
+                    }
+                )
             }
 
             composable(Screen.Microphone.route) {
@@ -79,7 +83,7 @@ private fun BottomBar(
             ),
             NavigationItem(
                 title = stringResource(R.string.menu_microphone),
-                icon = Icons.Default.Call,
+                icon = Icons.Filled.Mic,
                 screen = Screen.Microphone
             ),
         )
