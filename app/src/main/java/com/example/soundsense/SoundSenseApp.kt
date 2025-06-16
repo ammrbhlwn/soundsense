@@ -7,11 +7,13 @@ import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
@@ -71,7 +73,8 @@ private fun BottomBar(
     modifier: Modifier = Modifier,
 ) {
     NavigationBar(
-        modifier = Modifier
+        modifier = Modifier,
+        containerColor = Color.White
     ) {
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentRoute = navBackStackEntry?.destination?.route
@@ -108,6 +111,13 @@ private fun BottomBar(
                         }
                     }
                 },
+                colors = NavigationBarItemDefaults.colors(
+                    selectedIconColor = Color(0xFF2F88FF),
+                    selectedTextColor = Color(0xFF2F88FF),
+                    unselectedIconColor = Color.Gray,
+                    unselectedTextColor = Color.Gray,
+                    indicatorColor = Color(0xFFE3F2FD)
+                )
             )
         }
     }

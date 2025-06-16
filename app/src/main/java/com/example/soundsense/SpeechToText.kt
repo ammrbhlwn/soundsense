@@ -64,6 +64,7 @@ class RealSpeechToText(context: Context) : SpeechToText {
             }
         })
     }
+
     private val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
         putExtra(
             RecognizerIntent.EXTRA_LANGUAGE_MODEL,
