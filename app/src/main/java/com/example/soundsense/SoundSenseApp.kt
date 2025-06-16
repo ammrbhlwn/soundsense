@@ -107,7 +107,7 @@ private fun BottomBar(
                             restoreState = true
                         }
                     }
-                }
+                },
             )
         }
     }

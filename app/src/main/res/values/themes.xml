@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.SoundSense" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.SoundSense" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+
     <style name="Theme.App.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/white</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/logo_soundsense</item>
